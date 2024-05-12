@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>NextJS</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/sky.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+    <style>
+        .reveal ul, .reveal ul ul {
+            list-style-type: none;
+        }
+
+        section > ul > li {
+            margin-top: 20px;
+        }
+
+        .reveal iframe {
+            width: 800px;
+            height: 600px;
+        }
+
+        .blink {
+            animation: blinker .5s linear infinite;
+        }
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h2>
+                React&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;NextJs
+            </h2>
+            <p style="text-align: center"><a target="_blank" href="http://x.com/jbcazaux">@jbcazaux</a></p>
+        </section>
+        <section>
+            <h3>&#x23F3; === &#x1F4B8;</h3>
+        </section>
+        <section>
+            <ul>
+                <li>
+                    <b> &#x2197;</b> Loading time
+                    <ul>
+                        <li><b>&#x1F4C8;</b> bouce rate &#9977;&#127998;&zwj;&#9792;</li>
+                        <li><b>&#x1F4C9;</b> conversion rate &#x1F3AF;</li>
+                        <li><b>&#x1F4C9;</b> average basket value &#128184;</li>
+                        <li><b>&#x1F4C8;</b> leaving before fully loaded &#128682;</li>
+                        <li><b>&#x1F4C8;</b> bad comments &#128488;</li>
+                        <li><b>&#x1F4C8;</b> use others services 👋</li>
+                    </ul>
+                </li>
+                <li>75% of web traffic on &#x1F4F1; in 2022 in 🇫🇷</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Core Web Vitals</h3>
+            <img
+                    width="305px"
+                    height="auto"
+                    data-src="images/largest-contentful-paint.svg"
+                    alt="LCP"
+                    style="border: none; background: none; box-shadow: none; margin: 0"
+            />
+            <img
+                    width="305px"
+                    height="auto"
+                    data-src="images/inp-thresholds.svg"
+                    alt="INP"
+                    style="border: none; background: none; box-shadow: none; margin: 0"
+            />
+            <img
+                    width="305px"
+                    height="auto"
+                    data-src="images/cumulative-layout-shift.svg"
+                    alt="CLS"
+                    style="border: none; background: none; box-shadow: none; margin: 0"
+            />
+        </section>
+        <section data-auto-animate>
+            <h3 style="text-transform: none;">BACK TO THE 90's</h3>
+        </section>
+        <section >
+            <h3 style="text-transform: none;" class="blink">BACK TO THE 90's</h3>
+            <img
+                    width="305px"
+                    height="auto"
+                    data-src="images/under_construction.gif"
+                    alt="CLS"
+                    style="border: none; background: none; box-shadow: none; margin: 0"
+            />
+        </section>
+        <section data-auto-animate>
+            <h3 style="text-transform: none;">BACK TO THE 90's</h3>
+            <iframe data-src="htmls/90s.drawio.html" title="90s" style="margin-left: 25%"></iframe>
+        </section>
+        <section data-auto-animate>
+            <h3>Client Side Rendering</h3>
+            <h4>JQuery ($) - React - Angular - Svelte - Vue</h4>
+            <iframe data-src="htmls/CSR.drawio.html" title="CSR" style="margin-left: 25%"></iframe>
+        </section>
+        <section data-auto-animate>
+            <h3>Client Side Rendering</h3>
+            <h4>JQuery ($) - React - Angular - Svelte - Vue</h4>
+            <h4 style="font-size: .8em">Dojo - EmberJs - ExtJs - Backbone - ...</h4>
+            <iframe data-src="htmls/CSR.drawio.html" title="CSR" style="margin-left: 25%"></iframe>
+        </section>
+        <section data-auto-animate>
+            <h3>Client Side Rendering</h3>
+            <iframe data-src="htmls/CSR-sketch.drawio.html" title="CSR"></iframe>
+        </section>
+        <section>
+            <h3>SEO</h3>
+            <p>search engines &#x1F494; CSR</p>
+        </section>
+        <section data-auto-animate data-auto-animate-id="ssr">
+            <h3 style="text-transform: none;"><b>S</b>erver <b>S</b>ide <b>R</b>endering ! &#x1F929;</h3>
+        </section>
+        <section data-auto-animate data-auto-animate-id="ssr">
+            <h3>SSR !== SSR &#x1F92A;</h3>
+        </section>
+        <section data-auto-animate data-auto-animate-id="nextjs">
+            <h3>NextJS - <b>Page</b> Router</h3>
+            <ul>
+                <li>- <b>C</b>lient <b>S</b>ide <b>R</b>endering</li>
+                <li>
+                    - <b>S</b>erver <b>S</b>ide <b>R</b>endering
+                    <ul>
+                        <li>- <b>S</b>tatic <b>S</b>ite <b>G</b>eneration</li>
+                        <li>- <b>I</b>ncremental <b>S</b>tatic <b>R</b>egeneration</li>
+                        <li>- <b>S</b>erver <b>S</b>ide <b>R</b>endering</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section data-auto-animate data-auto-animate-id="nextjs">
+            <h3>NextJS - <b>App</b> Router</h3>
+            <ul>
+                <li>- <b>C</b>lient <b>S</b>ide <b>R</b>endering</li>
+                <li>
+                    - <b>S</b>erver <b>S</b>ide <b>R</b>endering
+                    <ul>
+                        <li>- Static</li>
+                        <li>- Revalidated</li>
+                        <li>- Dynamic</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h4><s>Static Site Generation</s></h4>
+            <h3>Static</h3>
+            <iframe data-src="htmls/SSG.drawio.html" title="CSR" style="margin-left: 25%"></iframe>
+        </section>
+        <section>
+            <h3>Static</h3>
+            <iframe data-src="htmls/SSG-sketch.drawio.html" title="CSR"></iframe>
+        </section>
+        <section data-auto-animate>
+            <h3>Static</h3>
+            <ul>
+                <li>&#x2705; Build once, GET everywhere</li>
+            </ul>
+        </section>
+        <section data-auto-animate>
+            <h3>Static</h3>
+            <ul>
+                <li>&#x2705; Build once, GET everywhere</li>
+                <li>&#x2705; Cannot be faster (CDN, cache, ...)</li>
+            </ul>
+        </section>
+        <section data-auto-animate>
+            <h3>Static</h3>
+            <ul>
+                <li>&#x2705; Build once, GET everywhere</li>
+                <li>&#x2705; Cannot be faster (CDN, cache, ...)</li>
+                <li>&#x274C; No dynamic data (real time, user/request specific)</li>
+            </ul>
+        </section>
+        <section data-auto-animate>
+            <h3>Static</h3>
+            <ul>
+                <li>&#x2705; Build <s>once</s>, GET everywhere</li>
+                <li>&#x2705; Cannot be faster (CDN, cache, ...)</li>
+                <li>&#x274C; No dynamic data (real time, user/request specific)</li>
+                <li>&#x2705; Blogs, every site with a few builds per day</li>
+            </ul>
+        </section>
+        <section>
+            <h4><s>Incremental Static Regeneration</s></h4>
+            <h3>Revalidated</h3>
+            <iframe data-src="htmls/ISR.drawio.html" title="ISR" style="margin-left: 25%"></iframe>
+        </section>
+        <section>
+            <h3>Revalidated</h3>
+            <iframe data-src="htmls/ISR-sketch.drawio.html" title="ISR"></iframe>
+        </section>
+        <section>
+            <h3>Revalidated</h3>
+            <ul>
+                <li>&#x2705; Rebuild page when stale data is fetched</li>
+                <li>&#x2705; Blogs, every site with "static-dynamic" content</li>
+                <li>&#x2705; Cannot be faster (CDN, cache, ...)</li>
+                <li>TODO</li>
+            </ul>
+        </section>
+        <section>
+            <h4><s>Server Side Rendering</s></h4>
+            <h3>Dynamic</h3>
+            <iframe data-src="htmls/SSR.drawio.html" title="SSR" style="margin-left: 25%"></iframe>
+        </section>
+        <section>
+            <h3>Dynamic</h3>
+            <iframe data-src="htmls/SSR-sketch.drawio.html" title="SSR" style="margin-left: 25%"></iframe>
+        </section>
+        <section>
+            <h3>Dynamic</h3>
+            <ul>
+                <li>&#x2705; Page is built server side</li>
+                <li>&#x2705; Support "old" devices (CSR)</li>
+                <li>&#x2705; Can serve users custom contents (cookies, url params, ... )</li>
+                <li>&#x274C; Can not cache data in a CDN</li>
+                <li>&#x2705; Can cache data in browsers</li>
+                <li>TODO</li>
+            </ul>
+        </section>
+        <section>
+            <h3>&#x1F354; Quizz</h3>
+            <ul>
+                <li>- Photo Gallery of the company &#x1F4F8; ?</li>
+                <li>- Bank accounts management &#x1F4B0; ?</li>
+                <li>- Institutional site &#x1F3E2; ?</li>
+                <li>- Wikipedia <b>W</b> ?</li>
+                <li>- E-commerce site with custom discount &#x1F4B3; ?</li>
+            </ul>
+        </section>
+        <section>
+            <p>Apps have static <b>and</b> dynamic content.</p>
+            <iframe data-src="htmls/website.drawio.html" title="website"></iframe>
+        </section>
+        <section>
+            <p>
+                With dynamic rendering, your application is only as fast as your slowest data fetch.
+            </p>
+            <iframe data-src="htmls/SSR-sketch.drawio.html" title="SSR" style="margin-left: 25%"></iframe>
+        </section>
+        <section data-auto-animate>
+            <h3>Split each screen into <b>small components</b></h3>
+            <ul>
+                <li>- a component can be <b>client side</b> or <b>server side</b></li>
+            </ul>
+        </section>
+        <section data-auto-animate>
+            <h3>Split each screen into <b>small components</b></h3>
+            <ul>
+                <li>- a component can be <b>client side</b> or <b>server side</b></li>
+                <li>- server component => <b>no js</b> in client bundle</li>
+            </ul>
+        </section>
+        <section data-auto-animate>
+            <h3>Split each screen into <b>small components</b></h3>
+            <ul>
+                <li>- a component can be <b>client side</b> or <b>server side</b></li>
+                <li>- server component => <b>no js</b> in client bundle</li>
+                <li>- server component with stale data may be OK</li>
+            </ul>
+        </section>
+        <section data-auto-animate>
+            <h3>Split each screen into <b>small components</b></h3>
+            <ul>
+                <li>- a component can be <b>client side</b> or <b>server side</b></li>
+                <li>- server component => <b>no js</b> in client bundle</li>
+                <li>- server component with stale data may be OK</li>
+                <li>- <b class="blink">stream</b> dynamic content</li>
+            </ul>
+        </section>
+        <section data-auto-animate>
+            <h3>e-commerce</h3>
+            <iframe data-src="htmls/ecommerce.drawio.html" title="ecommerce"></iframe>
+        </section>
+        <section data-auto-animate>
+            <h3>e-commerce</h3>
+            <iframe data-src="htmls/ecommerce2.drawio.html" title="ecommerce"></iframe>
+        </section>
+        <section data-auto-animate>
+            <h3>Demo</h3>
+            <ul>
+                <li>- stream dynamic content</li>
+            </ul>
+        </section>
+        <section data-auto-animate>
+            <h3>Demo</h3>
+            <ul>
+                <li>- stream dynamic content</li>
+                <li>- stale data</li>
+            </ul>
+        </section>
+        <section data-auto-animate>
+            <h3>Demo</h3>
+            <ul>
+                <li>- stream dynamic content</li>
+                <li>- stale data</li>
+                <li>- disable JS</li>
+            </ul>
+        </section>
+        <section data-auto-animate>
+            <h3>Demo</h3>
+            <ul>
+                <li>- stream dynamic content</li>
+                <li>- stale data</li>
+                <li>- disable JS</li>
+                <li>- prefetch</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Prefetch</h3>
+            <ul>
+                <li>&#x1F929; vs. &#x1F331;</li>
+                <li>Do not prefetch all the links (footer ?)</li>
+                <li>Programatic prefetch (mouse hover ?)</li>
+            </ul>
+        </section>
+        <section>
+            <h3>SPA</h3>
+            Send minimal data to display next page.
+        </section>
+        <section data-auto-animate>
+            <h3>Architecture</h3>
+            <iframe data-src="htmls/archi1.drawio.html" title="achitecture" style="margin-left: 15%"></iframe>
+        </section>
+        <section data-auto-animate>
+            <h3>Architecture</h3>
+            <iframe data-src="htmls/archi2.drawio.html" title="achitecture" style="margin-left: 15%"></iframe>
+        </section>
+        <section data-auto-animate>
+            <h3>Architecture</h3>
+            <iframe data-src="htmls/archi.drawio.html" title="achitecture" style="margin-left: 15%"></iframe>
+        </section>
+        <section >
+            <h3>CDN & stale data</h3>
+            <iframe data-src="htmls/cdn-isr-kub.drawio.html" title="cdn-stale"></iframe>
+        </section>
+        <section>
+            <span style="font-size: 2em">&#x2753; &#x1F64F; &#x1F355; &#x1F563;</span>
+        </section>
+    </div>
+</div>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script>
+    Reveal.initialize({
+        hash: true,
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+</script>
+</body>
+</html>
