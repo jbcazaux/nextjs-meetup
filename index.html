@@ -30,6 +30,7 @@
         .blink {
             animation: blinker .5s linear infinite;
         }
+
         @keyframes blinker {
             50% {
                 opacity: 0;
@@ -92,7 +93,7 @@
         <section data-auto-animate>
             <h3 style="text-transform: none;">BACK TO THE 90's</h3>
         </section>
-        <section >
+        <section>
             <h3 style="text-transform: none;" class="blink">BACK TO THE 90's</h3>
             <img
                     width="305px"
@@ -109,17 +110,21 @@
         <section data-auto-animate>
             <h3>Client Side Rendering</h3>
             <h4>JQuery ($) - React - Angular - Svelte - Vue</h4>
-            <iframe data-src="htmls/CSR.drawio.html" title="CSR" style="margin-left: 25%"></iframe>
         </section>
         <section data-auto-animate>
             <h3>Client Side Rendering</h3>
             <h4>JQuery ($) - React - Angular - Svelte - Vue</h4>
             <h4 style="font-size: .8em">Dojo - EmberJs - ExtJs - Backbone - ...</h4>
-            <iframe data-src="htmls/CSR.drawio.html" title="CSR" style="margin-left: 25%"></iframe>
         </section>
         <section data-auto-animate>
             <h3>Client Side Rendering</h3>
+            <h4>JQuery ($) - React - Angular - Svelte - Vue</h4>
             <iframe data-src="htmls/CSR-sketch.drawio.html" title="CSR"></iframe>
+        </section>
+        <section data-auto-animate>
+            <h3>Client Side Rendering</h3>
+            <h4>JQuery ($) - React - Angular - Svelte - Vue</h4>
+            <iframe data-src="htmls/CSR.drawio.html" title="CSR" style="margin-left: 25%"></iframe>
         </section>
         <section>
             <h3>SEO</h3>
@@ -162,11 +167,11 @@
         <section>
             <h4><s>Static Site Generation</s></h4>
             <h3>Static</h3>
-            <iframe data-src="htmls/SSG.drawio.html" title="CSR" style="margin-left: 25%"></iframe>
+            <iframe data-src="htmls/SSG-sketch.drawio.html" title="CSR"></iframe>
         </section>
         <section>
             <h3>Static</h3>
-            <iframe data-src="htmls/SSG-sketch.drawio.html" title="CSR"></iframe>
+            <iframe data-src="htmls/SSG.drawio.html" title="CSR" style="margin-left: 25%"></iframe>
         </section>
         <section data-auto-animate>
             <h3>Static</h3>
@@ -201,11 +206,12 @@
         <section>
             <h4><s>Incremental Static Regeneration</s></h4>
             <h3>Revalidated</h3>
-            <iframe data-src="htmls/ISR.drawio.html" title="ISR" style="margin-left: 25%"></iframe>
+            <iframe data-src="htmls/ISR-sketch.drawio.html" title="ISR"></iframe>
         </section>
         <section>
+            <h4><s>Incremental Static Regeneration</s></h4>
             <h3>Revalidated</h3>
-            <iframe data-src="htmls/ISR-sketch.drawio.html" title="ISR"></iframe>
+            <iframe data-src="htmls/ISR.drawio.html" title="ISR" style="margin-left: 25%"></iframe>
         </section>
         <section>
             <h3>Revalidated</h3>
@@ -213,17 +219,17 @@
                 <li>&#x2705; Rebuild page when stale data is fetched</li>
                 <li>&#x2705; Blogs, every site with "static-dynamic" content</li>
                 <li>&#x2705; Cannot be faster (CDN, cache, ...)</li>
-                <li>TODO</li>
             </ul>
         </section>
         <section>
             <h4><s>Server Side Rendering</s></h4>
             <h3>Dynamic</h3>
-            <iframe data-src="htmls/SSR.drawio.html" title="SSR" style="margin-left: 25%"></iframe>
+            <iframe data-src="htmls/SSR-sketch.drawio.html" title="SSR" style="margin-left: 25%"></iframe>
         </section>
         <section>
+            <h4><s>Server Side Rendering</s></h4>
             <h3>Dynamic</h3>
-            <iframe data-src="htmls/SSR-sketch.drawio.html" title="SSR" style="margin-left: 25%"></iframe>
+            <iframe data-src="htmls/SSR.drawio.html" title="SSR" style="margin-left: 25%"></iframe>
         </section>
         <section>
             <h3>Dynamic</h3>
@@ -233,7 +239,6 @@
                 <li>&#x2705; Can serve users custom contents (cookies, url params, ... )</li>
                 <li>&#x274C; Can not cache data in a CDN</li>
                 <li>&#x2705; Can cache data in browsers</li>
-                <li>TODO</li>
             </ul>
         </section>
         <section>
@@ -348,12 +353,89 @@
             <h3>Architecture</h3>
             <iframe data-src="htmls/archi.drawio.html" title="achitecture" style="margin-left: 15%"></iframe>
         </section>
-        <section >
+        <section>
             <h3>CDN & stale data</h3>
             <iframe data-src="htmls/cdn-isr-kub.drawio.html" title="cdn-stale"></iframe>
         </section>
         <section>
-            <span style="font-size: 2em">&#x2753; &#x1F64F; &#x1F355; &#x1F563;</span>
+        <section>
+            <h3>Is it easy to develop ?</h3>
+        </section>
+        <section>
+            src/app/layout.tsx
+            <pre style="height: 450px;">
+              <code data-trim>
+export default ({ children }: { children: React.ReactNode }) =&gt; (
+  &lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;E-commerce app&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;Header /&gt;
+      &lt;main&gt;
+        &lt;aside&gt;
+          &lt;Menu /&gt;
+        &lt;/aside&gt;
+        {children}
+      &lt;/main&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;
+)
+              </code>
+            </pre>
+        </section>
+        <section>
+src/app/catalog/[category]/[product]/page.tsx
+        <pre style="height: 500px">
+            <code>
+interface Props {
+  params: { product: string }
+}
+
+const Product = ({ params }: Props) =&gt; (
+  &lt;div className={styles.product}&gt;
+    &lt;Suspense fallback={'loading product...'}&gt;
+      &lt;ProductDetails id={params.product} /&gt;
+    &lt;/Suspense&gt;
+    &lt;Suspense fallback={&lt;CustomPriceSkeleton /&gt;}&gt;
+      &lt;CustomPrice id={params.product} /&gt;
+    &lt;/Suspense&gt;
+    &lt;Suspense fallback={&lt;MoreProductsSkeleton /&gt;}&gt;
+      &lt;MoreProducts /&gt;
+    &lt;/Suspense&gt;
+  &lt;/div&gt;
+)                
+            </code>
+        </pre>    
+        </section>
+        <section>
+            src/app/catalog/[category]/[product]/_MoreProducts/index.tsx
+            <pre style="height: 500px">
+                <code>
+const MoreProducts = async () =&gt; {
+
+    const products =
+        await fetch(`${BASE_API_URL}/more-products`,
+            { next: { revalidate: 1800 } })
+        .then(res =&gt; res.json()) as ReadonlyArray&lt;Product&gt;
+
+    return (
+        &lt;div className={styles.products}&gt;
+            {products.map(product =&gt;
+              (&lt;Product
+                    title={product.title}
+                    image={product.image}
+                    key={product.id}
+              /&gt;))}
+        &lt;/div&gt;
+    )
+}                    
+                </code>
+            </pre>
+        </section>
+        </section>
+        <section>
+            <span style="font-size: 2em">&#x2753; &#x1F64F; <span class="blink">&#x1F355;</span> &#x1F563;</span>
         </section>
     </div>
 </div>
